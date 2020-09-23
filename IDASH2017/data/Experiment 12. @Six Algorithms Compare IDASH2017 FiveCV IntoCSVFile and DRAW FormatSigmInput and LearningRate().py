@@ -190,7 +190,7 @@ NesterovAGwithHESSIANasG_TIME =      open(resfilepath_NesterovAGwithHESSIANasG_T
 #with open('nhanes3.txt','r') as csvfile:
 #with open('pcs.txt','r') as csvfile:
 #with open('uis.txt','r') as csvfile:
-with open('data103x1579.txt','r') as csvfile:
+with open('Credit_train.csv','r') as csvfile:
 	reader = csv.reader(csvfile)
 	reader.next() # leave behind the first row
 	data = []
@@ -819,6 +819,7 @@ for idxcv in range(NUMcv):
 	#                  Prob(y= I|x) = 1/(1+exp(-I*W.T*x))
 	#           grad = [Y@(1 - sigm(yWTx))]T * X
 	for iter in range(MAX_ITER):
+		break
 		Tbegin = time.clock()
 		curSigmoidInput = []
 
@@ -1413,6 +1414,7 @@ for idxcv in range(NUMcv):
 	#                  Prob(y= I|x) = 1/(1+exp(-I*W.T*x))
 	#           grad = [Y@(1 - sigm(yWTx))]T * X
 	for iter in range(MAX_ITER):
+		break
 		Tbegin = time.clock()
 		curSigmoidInput = []
 
@@ -1548,13 +1550,11 @@ for idxcv in range(NUMcv):
 	NesterovAGwithHESSIANasG_TIME.write("\n");
 
 
-	label = [ 'BonteSFH', 'BonteSFH + .25XTXasG', 'BonteSFH + HESSIANasG', 'NesterovAG', 'NesterovAG + .25XTXasG', 'NesterovAG + HESSIAN'  ]
+	label = [ 'BonteSFH', 'BonteSFH + .25XTXasG',  'NesterovAG', 'NesterovAG + .25XTXasG' ]
 	plt.plot(range(len(Emethod_TEST_Bonte_MLE)), Emethod_TEST_Bonte_MLE, 'o--b')
 	plt.plot(range(len(Emethod_TEST_BonteWithXTXasG_MLE)), Emethod_TEST_BonteWithXTXasG_MLE, 'v--b')
-	plt.plot(range(len(Emethod_TEST_BonteWithHESSIANasG_MLE)), Emethod_TEST_BonteWithHESSIANasG_MLE, '>--b')
 	plt.plot(range(len(Emethod_TEST_Nesterov_MLE)), Emethod_TEST_Nesterov_MLE, 'o--r')
 	plt.plot(range(len(Emethod_TEST_NesterovWithXTXasG_MLE)), Emethod_TEST_NesterovWithXTXasG_MLE, '^--r')
-	plt.plot(range(len(Emethod_TEST_NesterovWithHESSIANasG_MLE)), Emethod_TEST_NesterovWithHESSIANasG_MLE, '<--r')
 	#plt.axis("equal")
 	plt.title(str_idxcv+ '_TEST_MLE')
 	plt.legend(label, loc = 0, ncol = 1)  
@@ -1565,10 +1565,8 @@ for idxcv in range(NUMcv):
 
 	plt.plot(range(len(Emethod_TRAIN_Bonte_MLE)), Emethod_TRAIN_Bonte_MLE, 'o--b')
 	plt.plot(range(len(Emethod_TRAIN_BonteWithXTXasG_MLE)), Emethod_TRAIN_BonteWithXTXasG_MLE, 'v--b')
-	plt.plot(range(len(Emethod_TRAIN_BonteWithHESSIANasG_MLE)), Emethod_TRAIN_BonteWithHESSIANasG_MLE, '>--b')
 	plt.plot(range(len(Emethod_TRAIN_Nesterov_MLE)), Emethod_TRAIN_Nesterov_MLE, 'o--r')
 	plt.plot(range(len(Emethod_TRAIN_NesterovWithXTXasG_MLE)), Emethod_TRAIN_NesterovWithXTXasG_MLE, '^--r')
-	plt.plot(range(len(Emethod_TRAIN_NesterovWithHESSIANasG_MLE)), Emethod_TRAIN_NesterovWithHESSIANasG_MLE, '<--r')
 	#plt.axis("equal")
 	plt.title(str_idxcv+ '_TRAIN_MLE')
 	plt.legend(label, loc = 0, ncol = 1)  
@@ -1579,10 +1577,8 @@ for idxcv in range(NUMcv):
 
 	plt.plot(range(len(Emethod_TEST_Bonte_AUC)), Emethod_TEST_Bonte_AUC, 'o--b')
 	plt.plot(range(len(Emethod_TEST_BonteWithXTXasG_AUC)), Emethod_TEST_BonteWithXTXasG_AUC, 'v--b')
-	plt.plot(range(len(Emethod_TEST_BonteWithHESSIANasG_AUC)), Emethod_TEST_BonteWithHESSIANasG_AUC, '>--b')
 	plt.plot(range(len(Emethod_TEST_Nesterov_AUC)), Emethod_TEST_Nesterov_AUC, 'o--r')
 	plt.plot(range(len(Emethod_TEST_NesterovWithXTXasG_AUC)), Emethod_TEST_NesterovWithXTXasG_AUC, '^--r')
-	plt.plot(range(len(Emethod_TEST_NesterovWithHESSIANasG_AUC)), Emethod_TEST_NesterovWithHESSIANasG_AUC, '<--r')
 	plt.title(str_idxcv+ '_TEST_AUC')
 	plt.legend(label, loc = 0, ncol = 1)  
 	plt.grid()
@@ -1592,10 +1588,8 @@ for idxcv in range(NUMcv):
 
 	plt.plot(range(len(Emethod_TRAIN_Bonte_AUC)), Emethod_TRAIN_Bonte_AUC, 'o--b')
 	plt.plot(range(len(Emethod_TRAIN_BonteWithXTXasG_AUC)), Emethod_TRAIN_BonteWithXTXasG_AUC, 'v--b')
-	plt.plot(range(len(Emethod_TRAIN_BonteWithHESSIANasG_AUC)), Emethod_TRAIN_BonteWithHESSIANasG_AUC, '>--b')
 	plt.plot(range(len(Emethod_TRAIN_Nesterov_AUC)), Emethod_TRAIN_Nesterov_AUC, 'o--r')
 	plt.plot(range(len(Emethod_TRAIN_NesterovWithXTXasG_AUC)), Emethod_TRAIN_NesterovWithXTXasG_AUC, '^--r')
-	plt.plot(range(len(Emethod_TRAIN_NesterovWithHESSIANasG_AUC)), Emethod_TRAIN_NesterovWithHESSIANasG_AUC, '<--r')
 	plt.title(str_idxcv+ '_TRAIN_AUC')
 	plt.legend(label, loc = 0, ncol = 1)  
 	plt.grid()
@@ -1606,10 +1600,8 @@ for idxcv in range(NUMcv):
 
 	plt.plot(range(len(EmethodBonte_TIME)), EmethodBonte_TIME, 'o--b')
 	plt.plot(range(len(EmethodBonteWithXTXasG_TIME)), EmethodBonteWithXTXasG_TIME, 'v--b')
-	plt.plot(range(len(EmethodBonteWithHESSIANasG_TIME)), EmethodBonteWithHESSIANasG_TIME, '>--b')
 	plt.plot(range(len(EmethodNesterov_TIME)), EmethodNesterov_TIME, 'o--r')
 	plt.plot(range(len(EmethodNesterovWithXTXasG_TIME)), EmethodNesterovWithXTXasG_TIME, '^--r')
-	plt.plot(range(len(EmethodNesterovWithHESSIANasG_TIME)), EmethodNesterovWithHESSIANasG_TIME, '<--r')
 	plt.title(str_idxcv+ 'TIME')
 	plt.legend(label, loc = 0, ncol = 1)  
 	plt.grid()
@@ -1741,11 +1733,6 @@ Emethod_TRAIN_BonteWithXTXasG_MLE = getdata(train_BonteSFHwithXTXasG_MLE)
 Emethod_TRAIN_BonteWithXTXasG_AUC = getdata(train_BonteSFHwithXTXasG_AUC)
 EmethodBonteWithXTXasG_TIME = getdata(BonteSFHwithXTXasG_TIME)
 '''---------------------- BonteSFH + HESSIANasG ---------------------'''
-Emethod_TEST_BonteWithHESSIANasG_MLE = getdata(test_BonteSFHwithHESSIAN_MLE)	
-Emethod_TEST_BonteWithHESSIANasG_AUC = getdata(test_BonteSFHwithHESSIAN_AUC)
-Emethod_TRAIN_BonteWithHESSIANasG_MLE = getdata(train_BonteSFHwithHESSIAN_MLE)	
-Emethod_TRAIN_BonteWithHESSIANasG_AUC = getdata(train_BonteSFHwithHESSIAN_AUC)
-EmethodBonteWithHESSIANasG_TIME = getdata(BonteSFHwithHESSIAN_TIME)
 '''--------------------------- NesterovAG ---------------------------'''
 Emethod_TEST_Nesterov_MLE = getdata(test_NesterovAG_MLE)	
 Emethod_TEST_Nesterov_AUC = getdata(test_NesterovAG_AUC)
@@ -1759,11 +1746,6 @@ Emethod_TRAIN_NesterovWithXTXasG_MLE = getdata(train_NesterovAGwithXTXasG_MLE)
 Emethod_TRAIN_NesterovWithXTXasG_AUC = getdata(train_NesterovAGwithXTXasG_AUC)
 EmethodNesterovWithXTXasG_TIME = getdata(NesterovAGwithXTXasG_TIME)
 '''---------------------- NesterovAG + HESSIAN ----------------------'''
-Emethod_TEST_NesterovWithHESSIANasG_MLE = getdata(test_NesterovAGwithHESSIANasG_MLE) 	
-Emethod_TEST_NesterovWithHESSIANasG_AUC = getdata(test_NesterovAGwithHESSIANasG_AUC)
-Emethod_TRAIN_NesterovWithHESSIANasG_MLE = getdata(train_NesterovAGwithHESSIANasG_MLE)	
-Emethod_TRAIN_NesterovWithHESSIANasG_AUC = getdata(train_NesterovAGwithHESSIANasG_AUC)
-EmethodNesterovWithHESSIANasG_TIME = getdata(NesterovAGwithHESSIANasG_TIME)
 
 
 
