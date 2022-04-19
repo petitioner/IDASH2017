@@ -38,6 +38,8 @@ public:
 	void free();
 
 	virtual ~Ciphertext();
+
+	void kill();
 	
 };
 
