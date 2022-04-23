@@ -19,6 +19,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 np.set_printoptions(suppress=True)
 
+MAX_ITER = 300
+epsilon = 1e-08
+
 # Calculate the ROC-curve and the value of AUC
 # INPUT: score = [0.9, 0.8, 0.7, 0.6, 0.55, 0.54, 0.53, 0.52, 0.51, 0.505, 0.4, ... ]
 #        y = [1,1,0, 1, 1, 1, 0, 0, 1, 0, 1,0, 1, 0, 0, 0, 1 , 0, 1, 0]
@@ -79,12 +82,12 @@ import csv
 
 # Stage 1. 
 #     Step 1. Extract data from a csv file
-#with open('data103x1579.txt','r') as csvfile:
+with open('data103x1579.txt','r') as csvfile:
 #with open('edin.txt','r') as csvfile:
 #with open('lbw.txt','r') as csvfile:
 #with open('nhanes3.txt','r') as csvfile:
 #with open('pcs.txt','r') as csvfile:
-with open('uis.txt','r') as csvfile:
+#with open('uis.txt','r') as csvfile:
 	reader = csv.reader(csvfile)
 	reader.next() # leave behind the first row
 	data = []
@@ -104,17 +107,21 @@ Y = [ Y1 Y2  Y3  Y4 ... Yn ]
 '''
 X = [[1]+row[1:] for row in data[:]]
 for colidx in range(len(X[0])):
-	colmax = 1.0
+	colmax = X[0][colidx]
+	colmin = X[0][colidx]
 	for (rowidx, row) in enumerate(X):
 		if row[colidx] > colmax :
 			colmax = row[colidx]
+		if row[colidx] < colmin :
+			colmin = row[colidx]
 	for (rowidx, row) in enumerate(X):
-		row[colidx] /= colmax
+		if (colmax - colmin) < epsilon:
+			row[colidx] = .5;
+		else:
+			row[colidx] = (row[colidx] - colmin) / (colmax - colmin)
 Y = [int(row[0]) for row in data[:]]
 # turn y{+0,+1} to y{-1,+1}
 Y = [2*y-1 for y in Y]    # DONT FORGET THAT THE IDASH DATASET IS DIFFERENT FROM THE MNIST DATASET!
-
-
 
 
 #random.shuffle(X)
@@ -132,9 +139,6 @@ hlambda = lambda x:1.0/(1+exp(-x))
 #hlambda = lambda x:5.0000e-01  +1.7786e-01*x  -3.6943e-03*pow(x,3)  +3.6602e-05*pow(x,5)  -1.2344e-07*pow(x,7)
 
 
-MAX_ITER = 300
-
-
 '''
 -------------------------------------------------------------------------------------------
 ------------------------- The Presented Method: Nesterov + QG        ----------------------
@@ -150,7 +154,7 @@ MXTMX = MXT.dot(MX)
 # H = +1/4 * X.T * X         #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # ADAGRAD : ϵ is a smoothing term that avoids division by zero (usually on the order of 1e−8)
 # 'cause MB already has (-.25), in this case, don't use the Quadratic Gradient Descent Method 
-epsilon = 1e-08
+
 # BEGIN: Bonte's Specific Order On XTX
 '''
 X = | X11 X12 X13 |     
@@ -169,7 +173,7 @@ mxtmx = MX.T.dot(mx)
 print mxtmx
 mb = np.matrix(np.eye(mxtmx.shape[0]))
 for idx in range(mxtmx.shape[0]):
-	mb[idx,idx] = (+.25)*mxtmx[idx, 0]  + (+.25)*epsilon           
+	mb[idx,idx] = (+.25)*mxtmx[idx, 0]  + epsilon           
 	print 'M[',idx,'][',idx,'] = ',mb[idx,idx]
 # END  : Bonte's Specific Order On XTX
 
@@ -291,7 +295,7 @@ mxtmx = MX.T.dot(mx)
 print mxtmx
 mb = np.matrix(np.eye(mxtmx.shape[0]))
 for idx in range(mxtmx.shape[0]):
-	mb[idx,idx] = (+.25)*mxtmx[idx, 0]  + (+.25)*epsilon           
+	mb[idx,idx] = (+.25)*mxtmx[idx, 0]  + epsilon           
 	print 'M[',idx,'][',idx,'] = ',mb[idx,idx]
 # END  : Bonte's Specific Order On XTX
 
@@ -418,9 +422,15 @@ plt.grid()
 plt.show()
 '''
 
+
 # -------------- FILE: MLE -------------- 
-# -- Iterations -- Adagrad -- AdagradG -- 
-filePath = 'PythonExperiment_NAGvs.NAGG_uis_MLE.csv';
+# -- Iterations -- NAG -- NAGG -- 
+filePath = 'PythonExperiment_NAGvs.NAGG_data103x1579_MLE.csv';
+#filePath = 'PythonExperiment_NAGvs.NAGG_edin_MLE.csv';
+#filePath = 'PythonExperiment_NAGvs.NAGG_lbw_MLE.csv';
+#filePath = 'PythonExperiment_NAGvs.NAGG_nhanes3_MLE.csv';
+#filePath = 'PythonExperiment_NAGvs.NAGG_pcs_MLE.csv';
+#filePath = 'PythonExperiment_NAGvs.NAGG_uis_MLE.csv';
 PythonExperimentMNIST =      open(filePath,      'w')
 PythonExperimentMNIST =      open(filePath,      'a+b')
 

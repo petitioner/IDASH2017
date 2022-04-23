@@ -125,12 +125,18 @@ Y = [ Y1 Y2  Y3  Y4 ... Yn ]
 '''
 X = [[1]+row[1:] for row in data[:]]
 for colidx in range(len(X[0])):
-	colmax = 1.0
+	colmax = X[0][colidx]
+	colmin = X[0][colidx]
 	for (rowidx, row) in enumerate(X):
 		if row[colidx] > colmax :
 			colmax = row[colidx]
+		if row[colidx] < colmin :
+			colmin = row[colidx]
 	for (rowidx, row) in enumerate(X):
-		row[colidx] /= colmax
+		if (colmax - colmin) < epsilon:
+			row[colidx] = .5;
+		else:
+			row[colidx] = (row[colidx] - colmin) / (colmax - colmin)
 Y = [int(row[0]) for row in data[:]]
 # turn y{+0,+1} to y{-1,+1}
 Y = [2*y-1 for y in Y]    
@@ -498,8 +504,14 @@ plt.show()
 
 
 
+
 # -------------- FILE: MLE -------------- 
 # -- Iterations -- Adagrad -- AdagradG -- 
+#filePath = 'PythonExperiment_Adagradvs.AdagradG_data103x1579_MLE.csv';
+#filePath = 'PythonExperiment_Adagradvs.AdagradG_edin_MLE.csv';
+#filePath = 'PythonExperiment_Adagradvs.AdagradG_lbw_MLE.csv';
+#filePath = 'PythonExperiment_Adagradvs.AdagradG_nhanes3_MLE.csv';
+#filePath = 'PythonExperiment_Adagradvs.AdagradG_pcs_MLE.csv';
 filePath = 'PythonExperiment_Adagradvs.AdagradG_uis_MLE.csv';
 PythonExperimentMNIST =      open(filePath,      'w')
 PythonExperimentMNIST =      open(filePath,      'a+b')
