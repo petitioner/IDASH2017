@@ -1,0 +1,439 @@
+double** zData = GD::zDataFromFile(trainfile, factorDim, sampleDim, 1);
+printData(zData, , ,) 
+The   0-th Row:   -1.000000   -0.451613   -0.235294   -0.000000   -0.000000   -1.000000   -0.333333   -0.000000   -1.000000   -0.000000
+
+The  +1-th Row:   -1.000000   -0.483871   -0.294118   -1.000000   -0.000000   -0.000000   -0.000000   -0.000000   -1.000000   -0.333333
+
+
+# ./MyIDASH2017 "../data/data103x1579.txt" 1 5 5 1 -1 1 5 1
+
+
+
+testEncNLGDFOLD( ) 
+
+isYfirst = +1, number of iterations = +3, g_k = +5
+factors = +10, samples = +189, fold = +5
+gammaUp = +1.000000, gammaDown = -1.000000, isInitZero = +1
+batch = +16, slots = +4096, cnum = +1
+------------------
+Start Scheme generating...
+Scheme generation time = +16948.766000 ms
+------------------
+------------------
+Start Bootstrap Key generating
+Bootstrap Key generated time = +2298.053000 ms
+------------------
+------------------
+Start Polynomial generating...
+Polynomial generation time = +23.969000 ms
+------------------
+ !!! START +1 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.008795   +0.027612   +0.027218   +0.013888   +0.061117   +0.018419   +0.138394   +0.125164   +0.070556   +0.056083
+
+The  +1-th Row:   +0.008795   +0.027612   +0.027218   +0.013888   +0.061117   +0.018419   +0.138394   +0.125164   +0.070556   +0.056083
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +388.284000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +438.708000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +437.271000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +13801.788000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.478059,+0.488181,+0.483389,+0.447351,+0.307598,+0.287365,+0.278610,+0.125987,+0.461634,+0.423387,
+ACC: +0.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11382.034000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.477990,+0.488139,+0.483368,+0.447051,+0.306661,+0.286179,+0.277358,+0.124093,+0.461399,+0.422919,
+ACC: +0.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10455.914000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.640317,+0.658344,+0.653113,+0.579969,+0.325767,+0.280051,+0.264561,-0.007260,+0.609537,+0.531430,
+ACC: +0.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +3 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:+0.686058,+0.706301,+0.700944,+0.617423,+0.331151,+0.278324,+0.260955,-0.044273,+0.651280,+0.562007,
+ACC: +0.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+-------TRUE-------
+w:+0.300316,+0.097987,+0.098554,+0.176420,+0.027169,+0.081301,+0.010619,+0.004420,+0.036724,+0.041395,
+ACC: +0.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +1 FOLD !!! 
+------------------
+ !!! START +2 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.008666   +0.026878   +0.026710   +0.014135   +0.058404   +0.018556   +0.100682   +0.119622   +0.045543   +0.060000
+
+The  +1-th Row:   +0.008666   +0.026878   +0.026710   +0.014135   +0.058404   +0.018556   +0.100682   +0.119622   +0.045543   +0.060000
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +320.265000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +310.046000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +312.299000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +12785.306000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.340198,+0.353014,+0.378614,+0.369925,+0.235152,+0.196122,+0.016890,+0.000000,-0.068764,+0.377466,
+ACC: +40.540541 %.
+AUC: +0.418182
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11296.874000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.340221,+0.353069,+0.378851,+0.370059,+0.234636,+0.195341,+0.015179,-0.001875,-0.070829,+0.377613,
+ACC: +40.540541 %.
+AUC: +0.415152
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10383.570000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.456989,+0.478285,+0.529912,+0.508745,+0.263938,+0.187391,-0.144071,-0.181489,-0.293735,+0.520390,
+ACC: +40.540541 %.
+AUC: +0.403030
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:+0.489893,+0.513565,+0.572478,+0.547824,+0.272195,+0.185151,-0.188945,-0.232101,-0.356546,+0.560622,
+ACC: +40.540541 %.
+AUC: +0.409091
+
+------------------
+-------TRUE-------
+w:+0.216525,+0.072756,+0.079209,+0.145105,+0.021961,+0.054704,-0.000627,-0.001341,-0.012700,+0.035206,
+ACC: +40.540541 %.
+AUC: +0.433333
+
+------------------
+ !!! STOP +2 FOLD !!! 
+------------------
+ !!! START +3 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.008797   +0.029076   +0.028120   +0.015160   +0.062064   +0.017744   +0.090771   +0.091056   +0.045306   +0.065737
+
+The  +1-th Row:   +0.008797   +0.029076   +0.028120   +0.015160   +0.062064   +0.017744   +0.090771   +0.091056   +0.045306   +0.065737
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +347.853000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +342.975000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +317.913000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +13247.380000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.150539,+0.180325,+0.214620,+0.213636,-0.124945,-0.017861,-0.076140,-0.137483,-0.114011,+0.165423,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11606.674000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.150700,+0.180625,+0.215220,+0.214073,-0.126080,-0.018687,-0.077231,-0.138831,-0.115207,+0.165598,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10298.295000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.215115,+0.268898,+0.343689,+0.326226,-0.278005,-0.105654,-0.209039,-0.315852,-0.269653,+0.236416,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +3 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:+0.233266,+0.293768,+0.379890,+0.357829,-0.320815,-0.130161,-0.246180,-0.365733,-0.313173,+0.256371,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+-------TRUE-------
+w:+0.094997,+0.034977,+0.043766,+0.080188,-0.013152,-0.010185,-0.005867,-0.009913,-0.016710,+0.014140,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +3 FOLD !!! 
+------------------
+ !!! START +4 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.008423   +0.027050   +0.027947   +0.013370   +0.051748   +0.016362   +0.113989   +0.084053   +0.042027   +0.058604
+
+The  +1-th Row:   +0.008423   +0.027050   +0.027947   +0.013370   +0.051748   +0.016362   +0.113989   +0.084053   +0.042027   +0.058604
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +310.308000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +307.008000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +305.423000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +12882.815000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.144132,+0.188397,+0.197329,+0.248965,+0.000000,+0.016469,-0.229478,-0.084606,-0.063455,+0.211380,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11359.047000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.144131,+0.188648,+0.197664,+0.249530,-0.000607,+0.015718,-0.231601,-0.085808,-0.064487,+0.211707,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10406.273000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.190790,+0.274743,+0.294575,+0.385907,-0.060293,-0.052624,-0.514477,-0.231242,-0.186356,+0.312446,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +3 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:+0.203938,+0.298999,+0.321884,+0.424336,-0.077111,-0.071881,-0.594187,-0.272223,-0.220697,+0.340833,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+-------TRUE-------
+w:+0.093300,+0.039029,+0.039825,+0.106002,-0.001160,+0.000852,-0.012992,-0.007016,-0.010951,+0.020404,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +4 FOLD !!! 
+------------------
+ !!! START +5 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.008631   +0.027466   +0.029270   +0.015733   +0.048893   +0.016001   +0.098088   +0.119614   +0.041347   +0.058726
+
+The  +1-th Row:   +0.008631   +0.027466   +0.029270   +0.015733   +0.048893   +0.016001   +0.098088   +0.119614   +0.041347   +0.058726
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +311.842000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +315.143000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +313.387000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +12785.345000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.147698,+0.188176,+0.193328,+0.182117,+0.049215,+0.040265,-0.115189,-0.301003,-0.041619,+0.182262,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11127.719000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.147802,+0.188510,+0.193712,+0.182364,+0.048834,+0.039705,-0.116639,-0.303197,-0.042539,+0.182516,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10307.847000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.205839,+0.282590,+0.294151,+0.265657,+0.027268,-0.002307,-0.296491,-0.616036,-0.146385,+0.266603,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +3 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:+0.222194,+0.309096,+0.322454,+0.289128,+0.021190,-0.014146,-0.347170,-0.704189,-0.175647,+0.290297,
+ACC: +97.297297 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+-------TRUE-------
+w:+0.094869,+0.038829,+0.037567,+0.065221,+0.004837,+0.010577,-0.007919,-0.015933,-0.007761,+0.017600,
+ACC: +100.000000 %.
+n_test_yi = 0 : cannot compute AUC
+------------------
+ !!! STOP +5 FOLD !!! 
+------------------
+Average Encrypted correctness: +55.405405%
+Average Encrypted AUC: +0.067172
+Average True correctness: +40.034535%
+Average True AUC: +0.072222
+Average Evaluation Time: +29021.146833
