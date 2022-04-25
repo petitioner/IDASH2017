@@ -60,12 +60,17 @@ int main(int argc, char **argv) {
 	//	size_t peakAfterSchemeSize = getPeakRSS() >> 20;
 	//	cout << "Current Memory Usage After Scheme Generation: " << currentAfterSchemeSize << "MB"<< endl;
 	//	cout << "Peak Memory Usage After Scheme Generation: " << peakAfterSchemeSize << "MB"<< endl;
-	SetNumThreads(12);
+	SetNumThreads(36);
 
 	//./MyIDASH2017 \"../data/data103x1579.txt\" 1 7 5 1 -1 1 5 1
 	//string trainfile("../data/data103x1579.txt"); //string trainfile(argv[1]);
-	string trainfile("../data/edin.txt"); //string trainfile(argv[1]);
-	//string trainfile("../data/uis.txt"); //string trainfile(argv[1]);
+
+	//string trainfile("../data/idash18x1579.txt");
+	//string trainfile("../data/edin.txt");
+	//string trainfile("../data/lbw.txt");
+	//string trainfile("../data/nhanes3.txt");
+	//string trainfile("../data/pcs.txt"); 
+	string trainfile("../data/uis.txt"); 
 	bool isYfirst = 1;                            //atoi(argv[2]);
 	long numIter = 3;                             //atol(argv[3]);
 	long kdeg = 5;                                //atol(argv[4]);

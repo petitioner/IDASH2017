@@ -14,6 +14,9 @@
 #include "SecretKey.h"
 #include "TimeUtils.h"
 #include <cmath>
+#include <NTL/BasicThreadPool.h>
+#include <NTL/RR.h>
+#include <NTL/ZZ.h>
 
 #include "CipherGD.h"
 #include "GD.h"
@@ -123,6 +126,15 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 	timeutils.stop("Scheme generation");
 	CipherGD cipherGD(cnum, batch, factorDim, scheme, secretKey);
 
+	long logT=3, logI=4;
+    timeutils.start("Bootstrap Key generating");
+    long bootlogq = 30  +10;
+    long lognslots = (long)ceil(log2(batch));  //batch = factorDim / cnum;
+    //scheme.addBootKey(secretKey, logn, logq+logI);
+    scheme.addBootKey(secretKey, lognslots, bootlogq +logI);
+    timeutils.stop("Bootstrap Key generated");
+
+
 	timeutils.start("Polynomial generating...");
 	long np = ceil((pBits + logQ + logN + 2)/59.);
 	uint64_t* rpoly = new uint64_t[np << logN];
@@ -149,10 +161,11 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 	zDataTest = new double*[sampleDimTest];
 
 	//GD::normalizeZData(zData, factorDim, sampleDim);
-	GD::shuffleZData(zData, factorDim, sampleDim);
+	//GD::shuffleZData(zData, factorDim, sampleDim);
 
 	double enccor, encauc, truecor, trueauc;
 	double averenccor = 0, averencauc = 0, avertruecor = 0, avertrueauc = 0;
+	double averevalutime = 0;
 
 	for (long fnum = 0; fnum < fold; ++fnum) {
 		cout << " !!! START " << fnum + 1 << " FOLD !!! " << endl;
@@ -205,7 +218,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 
 		alpha0 = 0.01;
 		alpha1 = (1. + sqrt(1. + 4.0 * alpha0 * alpha0)) / 2.0;
-
+		double alliterationtime = 0;
 		for (long iter = 0; iter < numIter; ++iter) {
 			cout << " !!! START " << iter + 1 << " ITERATION !!! " << endl;
 			eta = (1 - alpha0) / alpha1;
@@ -216,6 +229,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 			cipherGD.encNLGDiteration(kdeg, encZData, encZInvB, encWData, encVData, rpoly, cnum, 1.0 + gamma, eta, sBits, bBits, wBits, pBits, aBits);
 			timeutils.stop("Enc NLGD");
 			cout << "encWData.logq after: " << encWData[0].logq << endl;
+			alliterationtime += timeutils.timeElapsed;
 
 			cout << "----ENCRYPTED--encVData---" << endl;
 			cipherGD.decWData(cwData, encWData, factorDim, batch, cnum, wBits);
@@ -225,11 +239,36 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 			GD::plainNLGDiteration(kdeg, zDataTrain, pwData, pvData, factorDim, sampleDimTrain, gamma, eta);
 			GD::trueNLGDiteration(zDataTrain, twData, tvData, factorDim, sampleDimTrain, gamma, eta);
 
+		if ( encVData[0].logq <= 310 + wBits && iter < numIter-1 || encVData[0].logq < wBits && iter == numIter-1 ) {
+			
+			timeutils.start("Use Bootstrap To Recrypt Ciphertext");			
+				NTL_EXEC_RANGE(cnum, first, last);
+				for(long i = first; i < last; ++i){
+				 	scheme.modDownToAndEqual(encWData[i], bootlogq);
+				 	encWData[i].n = batch;
+				 	scheme.bootstrapAndEqual(encWData[i], bootlogq, logQ, logT, logI);
+				 	encWData[i].n = slots;
+				 }
+				NTL_EXEC_RANGE_END
+				NTL_EXEC_RANGE(cnum, first, last);
+				for(long i = first; i < last; ++i){
+				 	scheme.modDownToAndEqual(encVData[i], bootlogq);
+				 	encVData[i].n = batch;
+				 	scheme.bootstrapAndEqual(encVData[i], bootlogq, logQ, logT, logI);
+				 	encVData[i].n = slots;
+				 }
+				NTL_EXEC_RANGE_END				
+
+			timeutils.stop("Use Bootstrap To Recrypt Ciphertext");
+
+		}
+
 
 			alpha0 = alpha1;
 			alpha1 = (1. + sqrt(1. + 4.0 * alpha0 * alpha0)) / 2.0;
 			cout << " !!! STOP " << iter + 1 << " ITERATION !!! " << endl;
 		}
+		averevalutime += alliterationtime;
 
 		averenccor += enccor;
 		averencauc += encauc;
@@ -255,6 +294,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 	cout << "Average Encrypted AUC: " << averencauc/(fold + 1.0) << endl;
 	cout << "Average True correctness: " << avertruecor/(fold + 1.0) << "%" << endl;
 	cout << "Average True AUC: " << avertrueauc/(fold + 1.0) << endl;
+	cout << "Average Evaluation Time: " << averevalutime/(fold + 1.0) << endl;
 }
 
 void TestGD::testPlainNLGDFOLD(long fold, double** zData, long factorDim, long sampleDim,
