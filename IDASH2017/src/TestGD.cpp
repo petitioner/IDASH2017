@@ -160,8 +160,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 	zDataTrain = new double*[sampleDimTrain];
 	zDataTest = new double*[sampleDimTest];
 
-	//GD::normalizeZData(zData, factorDim, sampleDim);
-	//GD::shuffleZData(zData, factorDim, sampleDim);
+	GD::shuffleZData(zData, factorDim, sampleDim);
 
 	double enccor, encauc, truecor, trueauc;
 	double averenccor = 0, averencauc = 0, avertruecor = 0, avertrueauc = 0;
@@ -290,11 +289,11 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 		cout << "------------------" << endl;
 	}
 
-	cout << "Average Encrypted correctness: " << averenccor/(fold + 1.0) << "%" << endl;
-	cout << "Average Encrypted AUC: " << averencauc/(fold + 1.0) << endl;
-	cout << "Average True correctness: " << avertruecor/(fold + 1.0) << "%" << endl;
-	cout << "Average True AUC: " << avertrueauc/(fold + 1.0) << endl;
-	cout << "Average Evaluation Time: " << averevalutime/(fold + 1.0) << endl;
+	cout << "Average Encrypted correctness: " << averenccor/fold  << "%" << endl;
+	cout << "Average Encrypted AUC: " << averencauc/fold << endl;
+	cout << "Average True correctness: " << avertruecor/fold << "%" << endl;
+	cout << "Average True AUC: " << avertrueauc/fold << endl;
+	cout << "Average Evaluation Time: " << averevalutime/fold << endl;
 }
 
 void TestGD::testPlainNLGDFOLD(long fold, double** zData, long factorDim, long sampleDim,

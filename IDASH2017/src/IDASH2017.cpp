@@ -65,19 +65,21 @@ int main(int argc, char **argv) {
 	//./MyIDASH2017 \"../data/data103x1579.txt\" 1 7 5 1 -1 1 5 1
 	//string trainfile("../data/data103x1579.txt"); //string trainfile(argv[1]);
 
-	//string trainfile("../data/idash18x1579.txt");
+	string trainfile("../data/idash18x1579.txt");
 	//string trainfile("../data/edin.txt");
 	//string trainfile("../data/lbw.txt");
 	//string trainfile("../data/nhanes3.txt");
 	//string trainfile("../data/pcs.txt"); 
-	string trainfile("../data/uis.txt"); 
+	//string trainfile("../data/uis.txt"); 
 	bool isYfirst = 1;                            //atoi(argv[2]);
 	long numIter = 3;                             //atol(argv[3]);
 	long kdeg = 5;                                //atol(argv[4]);
 	double gammaUp = 1;                           //atof(argv[5]);
 	double gammaDown = -1;                        //atof(argv[6]);
 	bool isInitZero = 1;                          //atoi(argv[7]);
-	long fold = 5;                                //atol(argv[8]);
+
+	long fold = 10;                                //atol(argv[8]);
+	
 	bool isEncrypted = 1;                         //atoi(argv[9]);
 	//string testfile = argc > 10? string(argv[10]) : trainfile;
 	//-----------------------------------------
