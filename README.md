@@ -58,11 +58,16 @@ You can change the source codes and then repeat the above lines to debug your ow
 
 ## Running a test source code
 
-In the 'Debug' folder, you can find two running results:   
+In the 'Debug' folder, you can find the C++ running results for six datasets:   
 
-        'CNNinferArchiveFile20220407.7z_SetNumThreads(42)_nohup.out'  
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold10_idash18x1579.txt_B_nohup.out'  
         
-        'CNNinferArchiveFile20220409.7z_SetNumThreads(42)_nohup.out'
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_edin.txt_F_nohup.out'  
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_lbw.txt_B_nohup.out'  
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_nhanes3.txt_D_nohup.out'  
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_pcs.txt_D_nohup.out'  
+        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_uis.txt_E_nohup.out'  
+  
         
         
 
