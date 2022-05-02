@@ -1,0 +1,1859 @@
+double** zData = GD::zDataFromFile(trainfile, factorDim, sampleDim, 1);
+printData(zData, , ,) 
+The   0-th Row:   -1.000000   -0.000000   -0.000000   -0.000000   -0.000000   -0.000000   -0.000000   -0.000000   -1.000000   -0.000000
+
+The  +1-th Row:   -1.000000   -1.000000   -0.000000   -0.000000   -0.000000   -0.000000   -0.000000   -1.000000   -1.000000   -1.000000
+
+
+# ./MyIDASH2017 "../data/data103x1579.txt" 1 5 5 1 -1 1 5 1
+
+
+
+testEncNLGDFOLD( ) 
+
+isYfirst = +1, number of iterations = +17, g_k = +5
+factors = +10, samples = +1253, fold = +5
+gammaUp = +1.000000, gammaDown = -1.000000, isInitZero = +1
+batch = +16, slots = +16384, cnum = +1
+------------------
+Start Scheme generating...
+Scheme generation time = +119338.601000 ms
+------------------
+------------------
+Start Bootstrap Key generating
+Bootstrap Key generated time = +16904.304000 ms
+------------------
+------------------
+Start Polynomial generating...
+Polynomial generation time = +152.462000 ms
+------------------
+ !!! START +1 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.001473   +0.005472   +0.009302   +0.018692   +0.006838   +0.028169   +0.004545   +0.005115   +0.002551   +0.002345
+
+The  +1-th Row:   +0.001473   +0.005472   +0.009302   +0.018692   +0.006838   +0.028169   +0.004545   +0.005115   +0.002551   +0.002345
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +2429.257000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +2415.762000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +2424.309000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +98553.070000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:-0.431370,-0.147879,-0.041903,+0.280653,+0.355910,+0.338365,+0.120574,-0.092164,-0.148106,-0.230006,
+ACC: +78.000000 %.
+AUC: +0.752516
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +83797.510000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:-0.433925,-0.147954,-0.041375,+0.283651,+0.359749,+0.341845,+0.122595,-0.091819,-0.148292,-0.230770,
+ACC: +78.000000 %.
+AUC: +0.752516
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70562.079000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:-0.708656,-0.167340,+0.007999,+0.593486,+0.756597,+0.702077,+0.327632,-0.063487,-0.175246,-0.319329,
+ACC: +83.200000 %.
+AUC: +0.880000
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359764.383000 ms
+------------------
+ !!! STOP +3 ITERATION !!! 
+ !!! START +4 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71112.563000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-0.977872,-0.153127,+0.074932,+0.919076,+1.199303,+1.083004,+0.576488,+0.003298,-0.175166,-0.376262,
+ACC: +87.200000 %.
+AUC: +0.931642
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360832.332000 ms
+------------------
+ !!! STOP +4 ITERATION !!! 
+ !!! START +5 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71044.276000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.259417,-0.122708,+0.138758,+1.235597,+1.666250,+1.461046,+0.850021,+0.091193,-0.165944,-0.417919,
+ACC: +87.200000 %.
+AUC: +0.944532
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360277.605000 ms
+------------------
+ !!! STOP +5 ITERATION !!! 
+ !!! START +6 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71116.444000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.538515,-0.082536,+0.190163,+1.512939,+2.119890,+1.804482,+1.125207,+0.192364,-0.151430,-0.443150,
+ACC: +89.200000 %.
+AUC: +0.944283
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360103.161000 ms
+------------------
+ !!! STOP +6 ITERATION !!! 
+ !!! START +7 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70924.679000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.807679,-0.037439,+0.226451,+1.743013,+2.545097,+2.106389,+1.389811,+0.300191,-0.134133,-0.452810,
+ACC: +90.000000 %.
+AUC: +0.943617
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +361693.781000 ms
+------------------
+ !!! STOP +7 ITERATION !!! 
+ !!! START +8 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71690.495000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.062090,+0.008483,+0.248933,+1.927200,+2.934935,+2.368637,+1.636834,+0.410201,-0.114931,-0.448810,
+ACC: +90.000000 %.
+AUC: +0.945281
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359424.221000 ms
+------------------
+ !!! STOP +8 ITERATION !!! 
+ !!! START +9 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71539.156000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.297478,+0.052856,+0.260191,+2.069923,+3.287765,+2.597119,+1.861310,+0.518647,-0.094016,-0.431981,
+ACC: +90.400000 %.
+AUC: +0.944865
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359869.949000 ms
+------------------
+ !!! STOP +9 ITERATION !!! 
+ !!! START +10 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71053.196000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.512586,+0.093187,+0.263551,+2.177866,+3.604331,+2.799499,+2.061560,+0.622217,-0.071816,-0.405060,
+ACC: +90.800000 %.
+AUC: +0.949771
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359446.479000 ms
+------------------
+ !!! STOP +10 ITERATION !!! 
+ !!! START +11 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71151.026000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.707006,+0.129002,+0.261607,+2.256822,+3.887534,+2.981819,+2.235677,+0.718614,-0.049344,-0.370201,
+ACC: +90.000000 %.
+AUC: +0.950021
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359905.655000 ms
+------------------
+ !!! STOP +11 ITERATION !!! 
+ !!! START +12 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70983.791000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.881227,+0.158807,+0.257189,+2.312289,+4.140256,+3.149506,+2.384852,+0.805406,-0.026981,-0.329238,
+ACC: +90.400000 %.
+AUC: +0.950187
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359478.016000 ms
+------------------
+ !!! STOP +12 ITERATION !!! 
+ !!! START +13 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70932.611000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.036246,+0.182391,+0.251781,+2.347916,+4.365138,+3.305878,+2.508936,+0.881942,-0.005526,-0.284302,
+ACC: +89.600000 %.
+AUC: +0.950021
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359513.451000 ms
+------------------
+ !!! STOP +13 ITERATION !!! 
+ !!! START +14 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71583.637000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.173623,+0.199600,+0.246987,+2.367540,+4.564679,+3.452221,+2.610076,+0.947732,+0.014952,-0.237245,
+ACC: +89.600000 %.
+AUC: +0.950603
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359638.073000 ms
+------------------
+ !!! STOP +14 ITERATION !!! 
+ !!! START +15 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70981.036000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.294362,+0.211111,+0.244003,+2.373646,+4.741080,+3.588464,+2.690050,+1.003272,+0.034135,-0.189173,
+ACC: +89.600000 %.
+AUC: +0.955509
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359781.157000 ms
+------------------
+ !!! STOP +15 ITERATION !!! 
+ !!! START +16 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71642.763000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.399464,+0.216805,+0.243817,+2.368587,+4.895257,+3.713270,+2.750965,+1.049249,+0.051808,-0.140811,
+ACC: +89.600000 %.
+AUC: +0.956757
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359685.400000 ms
+------------------
+ !!! STOP +16 ITERATION !!! 
+ !!! START +17 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70999.907000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.490754,+0.217458,+0.246125,+2.353816,+5.028666,+3.824002,+2.795465,+1.086494,+0.068135,-0.093644,
+ACC: +89.600000 %.
+AUC: +0.956840
+
+------------------
+ !!! STOP +17 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:-3.567569,+0.218096,+0.248214,+2.341407,+5.141090,+3.917478,+2.832805,+1.118004,+0.081829,-0.053671,
+ACC: +89.600000 %.
+AUC: +0.962412
+
+------------------
+-------TRUE-------
+w:-0.988727,-0.020067,+0.044348,+0.117095,+0.389581,+0.093038,+0.297827,+0.043168,-0.022655,-0.194887,
+ACC: +74.000000 %.
+AUC: +0.932890
+
+------------------
+ !!! STOP +1 FOLD !!! 
+------------------
+ !!! START +2 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.001465   +0.005714   +0.008351   +0.017699   +0.006240   +0.020725   +0.004381   +0.005405   +0.002519   +0.002358
+
+The  +1-th Row:   +0.001465   +0.005714   +0.008351   +0.017699   +0.006240   +0.020725   +0.004381   +0.005405   +0.002519   +0.002358
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +2326.270000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +2322.278000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +2326.634000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +98184.812000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:-0.398054,-0.094369,-0.033436,+0.292326,+0.368542,+0.342311,+0.151301,-0.100101,-0.112203,-0.205393,
+ACC: +85.200000 %.
+AUC: +0.804281
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +83437.171000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:-0.400543,-0.094255,-0.033051,+0.295144,+0.372250,+0.345633,+0.153401,-0.099983,-0.112315,-0.206159,
+ACC: +85.200000 %.
+AUC: +0.804501
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70083.165000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:-0.666626,-0.091289,+0.002969,+0.587798,+0.756838,+0.690838,+0.368114,-0.094156,-0.129724,-0.292955,
+ACC: +88.400000 %.
+AUC: +0.883274
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359487.115000 ms
+------------------
+ !!! STOP +3 ITERATION !!! 
+ !!! START +4 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71047.836000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-0.931655,-0.061883,+0.049586,+0.883737,+1.178468,+1.052810,+0.625076,-0.053066,-0.125819,-0.352594,
+ACC: +92.400000 %.
+AUC: +0.937665
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359278.089000 ms
+------------------
+ !!! STOP +4 ITERATION !!! 
+ !!! START +5 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71110.615000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.209681,-0.020613,+0.091019,+1.163138,+1.620708,+1.413795,+0.909658,+0.010797,-0.114320,-0.397540,
+ACC: +92.800000 %.
+AUC: +0.943182
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359198.633000 ms
+------------------
+ !!! STOP +5 ITERATION !!! 
+ !!! START +6 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71186.910000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.484615,+0.025494,+0.120236,+1.402325,+2.049942,+1.745128,+1.199368,+0.091067,-0.097891,-0.425365,
+ACC: +93.200000 %.
+AUC: +0.947043
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359929.610000 ms
+------------------
+ !!! STOP +6 ITERATION !!! 
+ !!! START +7 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71460.310000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.749692,+0.070831,+0.135445,+1.596786,+2.453127,+2.039218,+1.481760,+0.181591,-0.078661,-0.437657,
+ACC: +93.200000 %.
+AUC: +0.947374
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360118.351000 ms
+------------------
+ !!! STOP +7 ITERATION !!! 
+ !!! START +8 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71175.293000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.998697,+0.112646,+0.138604,+1.749965,+2.824642,+2.296560,+1.748667,+0.277612,-0.056714,-0.435533,
+ACC: +94.000000 %.
+AUC: +0.948147
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359109.217000 ms
+------------------
+ !!! STOP +8 ITERATION !!! 
+ !!! START +9 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70938.406000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.228732,+0.148526,+0.132316,+1.868218,+3.164068,+2.521816,+1.994324,+0.373994,-0.032336,-0.421115,
+ACC: +93.600000 %.
+AUC: +0.957966
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359201.699000 ms
+------------------
+ !!! STOP +9 ITERATION !!! 
+ !!! START +10 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71080.910000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.437932,+0.177387,+0.118765,+1.958511,+3.472829,+2.720143,+2.215308,+0.466775,-0.006040,-0.396970,
+ACC: +93.600000 %.
+AUC: +0.959510
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359494.520000 ms
+------------------
+ !!! STOP +10 ITERATION !!! 
+ !!! START +11 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70881.908000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.626304,+0.198231,+0.100280,+2.026780,+3.753684,+2.896858,+2.409588,+0.552722,+0.021477,-0.364980,
+ACC: +93.600000 %.
+AUC: +0.961606
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359426.391000 ms
+------------------
+ !!! STOP +11 ITERATION !!! 
+ !!! START +12 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70972.005000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.794321,+0.211536,+0.079080,+2.078233,+4.009620,+3.056481,+2.576951,+0.629874,+0.049722,-0.328044,
+ACC: +93.200000 %.
+AUC: +0.961606
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359151.231000 ms
+------------------
+ !!! STOP +12 ITERATION !!! 
+ !!! START +13 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70970.945000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.943267,+0.216996,+0.056303,+2.116335,+4.243967,+3.203185,+2.717749,+0.696543,+0.077746,-0.287244,
+ACC: +93.200000 %.
+AUC: +0.962268
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359245.369000 ms
+------------------
+ !!! STOP +13 ITERATION !!! 
+ !!! START +14 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70972.030000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.073345,+0.216440,+0.033080,+2.143340,+4.458193,+3.338231,+2.832756,+0.752739,+0.105289,-0.244392,
+ACC: +93.200000 %.
+AUC: +0.962379
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359425.646000 ms
+------------------
+ !!! STOP +14 ITERATION !!! 
+ !!! START +15 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70994.111000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.187304,+0.209761,+0.009778,+2.160883,+4.654730,+3.463271,+2.923968,+0.799263,+0.131979,-0.200947,
+ACC: +93.200000 %.
+AUC: +0.963151
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359178.463000 ms
+------------------
+ !!! STOP +15 ITERATION !!! 
+ !!! START +16 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70900.863000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.285422,+0.198523,-0.012868,+2.169044,+4.834152,+3.577693,+2.994116,+0.836460,+0.156578,-0.157248,
+ACC: +93.200000 %.
+AUC: +0.963482
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359247.525000 ms
+------------------
+ !!! STOP +16 ITERATION !!! 
+ !!! START +17 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70900.084000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.369510,+0.183696,-0.034766,+2.168150,+4.996713,+3.680674,+3.044840,+0.865819,+0.179498,-0.114339,
+ACC: +93.200000 %.
+AUC: +0.971536
+
+------------------
+ !!! STOP +17 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:-3.440360,+0.170873,-0.053214,+2.167034,+5.134012,+3.767439,+3.087400,+0.890650,+0.198765,-0.078145,
+ACC: +93.200000 %.
+AUC: +0.972198
+
+------------------
+-------TRUE-------
+w:-0.936936,+0.015252,+0.044002,+0.121650,+0.421607,+0.122124,+0.329193,+0.020420,+0.016933,-0.173881,
+ACC: +82.400000 %.
+AUC: +0.928839
+
+------------------
+ !!! STOP +2 FOLD !!! 
+------------------
+ !!! START +3 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.001435   +0.005155   +0.008081   +0.018519   +0.006126   +0.018349   +0.004315   +0.005333   +0.002469   +0.002236
+
+The  +1-th Row:   +0.001435   +0.005155   +0.008081   +0.018519   +0.006126   +0.018349   +0.004315   +0.005333   +0.002469   +0.002236
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +2316.956000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +2318.416000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +2318.251000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +98250.093000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:-0.397239,-0.147046,-0.032357,+0.268786,+0.346440,+0.321421,+0.131739,-0.085418,-0.140882,-0.222693,
+ACC: +82.400000 %.
+AUC: +0.629709
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +83262.096000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:-0.399639,-0.147221,-0.031878,+0.271542,+0.350077,+0.324665,+0.133761,-0.085134,-0.141132,-0.223514,
+ACC: +82.400000 %.
+AUC: +0.638440
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70041.609000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:-0.657104,-0.176212,+0.013220,+0.556946,+0.726506,+0.660993,+0.339713,-0.062258,-0.173930,-0.317086,
+ACC: +86.400000 %.
+AUC: +0.807493
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +358978.772000 ms
+------------------
+ !!! STOP +3 ITERATION !!! 
+ !!! START +4 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71049.330000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-0.911521,-0.174274,+0.071489,+0.851499,+1.143946,+1.015727,+0.589330,-0.004436,-0.183500,-0.382076,
+ACC: +90.400000 %.
+AUC: +0.915017
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359054.615000 ms
+------------------
+ !!! STOP +4 ITERATION !!! 
+ !!! START +5 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70917.598000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.178547,-0.156222,+0.124593,+1.133906,+1.583672,+1.367588,+0.866006,+0.073531,-0.185924,-0.432894,
+ACC: +90.400000 %.
+AUC: +0.932988
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359512.214000 ms
+------------------
+ !!! STOP +5 ITERATION !!! 
+ !!! START +6 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71729.477000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.444737,-0.128082,+0.164567,+1.378551,+2.011523,+1.685774,+1.147716,+0.164220,-0.183582,-0.467260,
+ACC: +90.800000 %.
+AUC: +0.937253
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360259.445000 ms
+------------------
+ !!! STOP +6 ITERATION !!! 
+ !!! START +7 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71046.017000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.701765,-0.093600,+0.189494,+1.579882,+2.413165,+1.962679,+1.421759,+0.261560,-0.177602,-0.485783,
+ACC: +91.600000 %.
+AUC: +0.938776
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359418.908000 ms
+------------------
+ !!! STOP +7 ITERATION !!! 
+ !!! START +8 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70968.768000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.945829,-0.057223,+0.200220,+1.739604,+2.782128,+2.197408,+1.680260,+0.360864,-0.168995,-0.489996,
+ACC: +92.000000 %.
+AUC: +0.947406
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359343.128000 ms
+------------------
+ !!! STOP +8 ITERATION !!! 
+ !!! START +9 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71650.051000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.172015,-0.020757,+0.200168,+1.863455,+3.117102,+2.394575,+1.918240,+0.458493,-0.158324,-0.481393,
+ACC: +91.600000 %.
+AUC: +0.947710
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359591.488000 ms
+------------------
+ !!! STOP +9 ITERATION !!! 
+ !!! START +10 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71024.942000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.379167,+0.013641,+0.191809,+1.957442,+3.418462,+2.558964,+2.132447,+0.551562,-0.145079,-0.462543,
+ACC: +92.000000 %.
+AUC: +0.961722
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359344.546000 ms
+------------------
+ !!! STOP +10 ITERATION !!! 
+ !!! START +11 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71076.304000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.566372,+0.043879,+0.178153,+2.027261,+3.688813,+2.696861,+2.321372,+0.637279,-0.130471,-0.435269,
+ACC: +92.800000 %.
+AUC: +0.978881
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359102.097000 ms
+------------------
+ !!! STOP +11 ITERATION !!! 
+ !!! START +12 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71695.406000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.734089,+0.068968,+0.161232,+2.078238,+3.930299,+2.813272,+2.484332,+0.713912,-0.115215,-0.402290,
+ACC: +92.800000 %.
+AUC: +0.979896
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +360186.467000 ms
+------------------
+ !!! STOP +12 ITERATION !!! 
+ !!! START +13 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71077.225000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.882923,+0.088797,+0.142735,+2.113695,+4.145708,+2.912356,+2.621875,+0.781039,-0.099556,-0.364665,
+ACC: +94.000000 %.
+AUC: +0.979998
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359863.542000 ms
+------------------
+ !!! STOP +13 ITERATION !!! 
+ !!! START +14 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70997.501000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.014089,+0.102537,+0.124010,+2.137989,+4.337527,+2.996978,+2.735668,+0.838185,-0.083620,-0.324741,
+ACC: +93.600000 %.
+AUC: +0.981622
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359191.151000 ms
+------------------
+ !!! STOP +14 ITERATION !!! 
+ !!! START +15 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70973.281000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.128439,+0.111731,+0.105762,+2.152657,+4.507998,+3.070486,+2.827247,+0.886324,-0.068299,-0.283483,
+ACC: +93.600000 %.
+AUC: +0.981724
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359388.153000 ms
+------------------
+ !!! STOP +15 ITERATION !!! 
+ !!! START +16 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71109.376000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.227066,+0.115033,+0.088815,+2.160127,+4.658117,+3.134103,+2.898622,+0.925544,-0.053487,-0.241798,
+ACC: +93.600000 %.
+AUC: +0.981724
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359552.153000 ms
+------------------
+ !!! STOP +16 ITERATION !!! 
+ !!! START +17 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71721.891000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.311149,+0.113665,+0.073598,+2.161557,+4.789677,+3.189353,+2.952398,+0.956470,-0.039485,-0.200373,
+ACC: +93.600000 %.
+AUC: +0.981724
+
+------------------
+ !!! STOP +17 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:-3.382046,+0.112409,+0.060689,+2.162639,+4.900561,+3.235867,+2.997423,+0.982845,-0.027541,-0.165538,
+ACC: +93.600000 %.
+AUC: +0.982130
+
+------------------
+-------TRUE-------
+w:-0.932344,-0.028380,+0.051107,+0.111745,+0.416232,+0.132004,+0.318333,+0.039197,-0.030637,-0.206749,
+ACC: +80.400000 %.
+AUC: +0.918063
+
+------------------
+ !!! STOP +3 FOLD !!! 
+------------------
+ !!! START +4 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.001431   +0.005249   +0.008147   +0.018605   +0.006061   +0.020101   +0.004362   +0.005175   +0.002385   +0.002232
+
+The  +1-th Row:   +0.001431   +0.005249   +0.008147   +0.018605   +0.006061   +0.020101   +0.004362   +0.005175   +0.002385   +0.002232
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +2318.880000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +2324.604000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +2324.412000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +98513.678000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:-0.393237,-0.144492,-0.000000,+0.288660,+0.354899,+0.321929,+0.128809,-0.095827,-0.125349,-0.214500,
+ACC: +84.000000 %.
+AUC: +0.738078
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +83454.411000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:-0.395646,-0.144664,+0.000684,+0.291542,+0.358570,+0.325157,+0.130774,-0.095666,-0.125512,-0.215287,
+ACC: +84.000000 %.
+AUC: +0.763861
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70064.316000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:-0.653730,-0.173279,+0.067942,+0.590411,+0.738863,+0.659945,+0.330858,-0.085535,-0.148683,-0.304927,
+ACC: +86.000000 %.
+AUC: +0.854732
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359764.644000 ms
+------------------
+ !!! STOP +3 ITERATION !!! 
+ !!! START +4 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71136.581000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-0.910295,-0.170215,+0.146439,+0.898218,+1.159333,+1.013385,+0.573565,-0.042657,-0.149195,-0.366408,
+ACC: +90.800000 %.
+AUC: +0.927681
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +364830.198000 ms
+------------------
+ !!! STOP +4 ITERATION !!! 
+ !!! START +5 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71078.241000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.180581,-0.149301,+0.218540,+1.194506,+1.602492,+1.365673,+0.842970,+0.018795,-0.141761,-0.412682,
+ACC: +91.600000 %.
+AUC: +0.946022
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359594.835000 ms
+------------------
+ !!! STOP +5 ITERATION !!! 
+ !!! START +6 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71029.677000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.450281,-0.116004,+0.274090,+1.452528,+2.034015,+1.686253,+1.118045,+0.092661,-0.129717,-0.441755,
+ACC: +92.400000 %.
+AUC: +0.946232
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359495.344000 ms
+------------------
+ !!! STOP +6 ITERATION !!! 
+ !!! START +7 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70966.004000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.712283,-0.074239,+0.310664,+1.666970,+2.439378,+1.966651,+1.387434,+0.173656,-0.113956,-0.454931,
+ACC: +92.800000 %.
+AUC: +0.949272
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359899.178000 ms
+------------------
+ !!! STOP +7 ITERATION !!! 
+ !!! START +8 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71068.469000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.961051,-0.028277,+0.330370,+1.840376,+2.812458,+2.206824,+1.642852,+0.258045,-0.095836,-0.452697,
+ACC: +92.800000 %.
+AUC: +0.952835
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359699.976000 ms
+------------------
+ !!! STOP +8 ITERATION !!! 
+ !!! START +9 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71092.403000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.193029,+0.018424,+0.335315,+1.977227,+3.150801,+2.409779,+1.879353,+0.342223,-0.074942,-0.437853,
+ACC: +93.200000 %.
+AUC: +0.952311
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359336.393000 ms
+------------------
+ !!! STOP +9 ITERATION !!! 
+ !!! START +10 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70953.254000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.406489,+0.062640,+0.329563,+2.084083,+3.455632,+2.581437,+2.093642,+0.423244,-0.051828,-0.412072,
+ACC: +93.600000 %.
+AUC: +0.964784
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359629.002000 ms
+------------------
+ !!! STOP +10 ITERATION !!! 
+ !!! START +11 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71113.716000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.600661,+0.102400,+0.316154,+2.166506,+3.728790,+2.726700,+2.283341,+0.498388,-0.027562,-0.378240,
+ACC: +93.600000 %.
+AUC: +0.965098
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359604.987000 ms
+------------------
+ !!! STOP +11 ITERATION !!! 
+ !!! START +12 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71210.020000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.775911,+0.136034,+0.297897,+2.229709,+3.972851,+2.850984,+2.448305,+0.566537,-0.001928,-0.338438,
+ACC: +93.600000 %.
+AUC: +0.965727
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359741.947000 ms
+------------------
+ !!! STOP +12 ITERATION !!! 
+ !!! START +13 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71078.970000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.933133,+0.163288,+0.276545,+2.277170,+4.190386,+2.957353,+2.588737,+0.626041,+0.023482,-0.294871,
+ACC: +94.000000 %.
+AUC: +0.961010
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359596.800000 ms
+------------------
+ !!! STOP +13 ITERATION !!! 
+ !!! START +14 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71111.968000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.072903,+0.182742,+0.254504,+2.311591,+4.383528,+3.049553,+2.705244,+0.677725,+0.049225,-0.249179,
+ACC: +94.400000 %.
+AUC: +0.959962
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359475.480000 ms
+------------------
+ !!! STOP +14 ITERATION !!! 
+ !!! START +15 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71017.133000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.196314,+0.195495,+0.232725,+2.334959,+4.554453,+3.129592,+2.799526,+0.720863,+0.074825,-0.202131,
+ACC: +94.400000 %.
+AUC: +0.960382
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359158.196000 ms
+------------------
+ !!! STOP +15 ITERATION !!! 
+ !!! START +16 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71143.973000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.304690,+0.200531,+0.212389,+2.348705,+4.704527,+3.198756,+2.873801,+0.756561,+0.099412,-0.155171,
+ACC: +94.400000 %.
+AUC: +0.959753
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359084.258000 ms
+------------------
+ !!! STOP +16 ITERATION !!! 
+ !!! START +17 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71060.546000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.398824,+0.199923,+0.193933,+2.354022,+4.834885,+3.258456,+2.930321,+0.785279,+0.123446,-0.108774,
+ACC: +94.400000 %.
+AUC: +0.957656
+
+------------------
+ !!! STOP +17 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:-3.478100,+0.199413,+0.178538,+2.358408,+4.944717,+3.308820,+2.977794,+0.809470,+0.143611,-0.069477,
+ACC: +94.400000 %.
+AUC: +0.957656
+
+------------------
+-------TRUE-------
+w:-0.932332,-0.027426,+0.069431,+0.116693,+0.427467,+0.119847,+0.308003,+0.025535,-0.001146,-0.193647,
+ACC: +81.200000 %.
+AUC: +0.943402
+
+------------------
+ !!! STOP +4 FOLD !!! 
+------------------
+ !!! START +5 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.001487   +0.005789   +0.009238   +0.021505   +0.006483   +0.021739   +0.004813   +0.005348   +0.002584   +0.002356
+
+The  +1-th Row:   +0.001487   +0.005789   +0.009238   +0.021505   +0.006483   +0.021739   +0.004813   +0.005348   +0.002584   +0.002356
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +2322.739000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +2319.246000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +2336.451000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +97450.978000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:-0.438356,-0.153544,-0.050860,+0.322902,+0.366653,+0.348173,+0.120458,-0.109735,-0.142260,-0.236985,
+ACC: +74.400000 %.
+AUC: +0.699617
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +83150.414000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:-0.440951,-0.153599,-0.050442,+0.326112,+0.370541,+0.351692,+0.122463,-0.109502,-0.142401,-0.237775,
+ACC: +74.400000 %.
+AUC: +0.702634
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70016.256000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:-0.720094,-0.171369,-0.012512,+0.658981,+0.772681,+0.716399,+0.325950,-0.093459,-0.164771,-0.329326,
+ACC: +80.000000 %.
+AUC: +0.823587
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359653.331000 ms
+------------------
+ !!! STOP +3 ITERATION !!! 
+ !!! START +4 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71820.843000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-0.993114,-0.149973,+0.038494,+0.997261,+1.217381,+1.098809,+0.571348,-0.037768,-0.160798,-0.387253,
+ACC: +84.800000 %.
+AUC: +0.905799
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359076.386000 ms
+------------------
+ !!! STOP +4 ITERATION !!! 
+ !!! START +5 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70931.165000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.277073,-0.106322,+0.082748,+1.319216,+1.684325,+1.476993,+0.839634,+0.040114,-0.147707,-0.428028,
+ACC: +84.400000 %.
+AUC: +0.936791
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359446.119000 ms
+------------------
+ !!! STOP +5 ITERATION !!! 
+ !!! START +6 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70885.220000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.557698,-0.047890,+0.112471,+1.598635,+2.137150,+1.819774,+1.107698,+0.133219,-0.129634,-0.450733,
+ACC: +85.200000 %.
+AUC: +0.942419
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359614.443000 ms
+------------------
+ !!! STOP +6 ITERATION !!! 
+ !!! START +7 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71001.360000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-1.826753,+0.019024,+0.126583,+1.832532,+2.561124,+2.120170,+1.363306,+0.234391,-0.109071,-0.457330,
+ACC: +85.200000 %.
+AUC: +0.941359
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359314.492000 ms
+------------------
+ !!! STOP +7 ITERATION !!! 
+ !!! START +8 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70958.532000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.079770,+0.089507,+0.127740,+2.025807,+2.950389,+2.380257,+1.599828,+0.339002,-0.087007,-0.450425,
+ACC: +85.200000 %.
+AUC: +0.941603
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359327.546000 ms
+------------------
+ !!! STOP +8 ITERATION !!! 
+ !!! START +9 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70985.292000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.313138,+0.159131,+0.119236,+2.185014,+3.303208,+2.604705,+1.812879,+0.442020,-0.063664,-0.432180,
+ACC: +85.600000 %.
+AUC: +0.946171
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359563.712000 ms
+------------------
+ !!! STOP +9 ITERATION !!! 
+ !!! START +10 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71008.115000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.524986,+0.225402,+0.104475,+2.317540,+3.621002,+2.799950,+2.000528,+0.540812,-0.039783,-0.404954,
+ACC: +85.600000 %.
+AUC: +0.946334
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359535.168000 ms
+------------------
+ !!! STOP +10 ITERATION !!! 
+ !!! START +11 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71836.195000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.715933,+0.285322,+0.086269,+2.428868,+3.906337,+2.971773,+2.163030,+0.632742,-0.016115,-0.371452,
+ACC: +86.800000 %.
+AUC: +0.946008
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359415.950000 ms
+------------------
+ !!! STOP +11 ITERATION !!! 
+ !!! START +12 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70852.040000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-2.885569,+0.338192,+0.066587,+2.522929,+4.161870,+3.124358,+2.299863,+0.716094,+0.007265,-0.333565,
+ACC: +86.400000 %.
+AUC: +0.950249
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359308.626000 ms
+------------------
+ !!! STOP +12 ITERATION !!! 
+ !!! START +13 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70982.821000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.035853,+0.382353,+0.047045,+2.602130,+4.390702,+3.260768,+2.412719,+0.789529,+0.029082,-0.293309,
+ACC: +86.400000 %.
+AUC: +0.949678
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359602.208000 ms
+------------------
+ !!! STOP +13 ITERATION !!! 
+ !!! START +14 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +71508.415000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.167512,+0.418189,+0.028684,+2.667380,+4.594699,+3.382803,+2.503894,+0.852990,+0.048938,-0.252218,
+ACC: +86.800000 %.
+AUC: +0.949596
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359269.013000 ms
+------------------
+ !!! STOP +14 ITERATION !!! 
+ !!! START +15 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70908.157000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.281900,+0.445976,+0.011620,+2.718784,+4.775618,+3.490837,+2.574627,+0.906841,+0.066676,-0.211041,
+ACC: +87.600000 %.
+AUC: +0.949759
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359263.362000 ms
+------------------
+ !!! STOP +15 ITERATION !!! 
+ !!! START +16 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70906.428000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.380751,+0.465286,-0.003644,+2.756293,+4.934465,+3.584180,+2.627536,+0.951532,+0.081833,-0.170255,
+ACC: +87.200000 %.
+AUC: +0.949841
+
+------------------
+------------------
+Start Use Bootstrap To Recrypt Ciphertext
+Use Bootstrap To Recrypt Ciphertext time = +359151.454000 ms
+------------------
+ !!! STOP +16 ITERATION !!! 
+ !!! START +17 ITERATION !!! 
+encWData.logq before: +605
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +70866.930000 ms
+------------------
+encWData.logq after: +315
+----ENCRYPTED--encVData---
+w:-3.464968,+0.477576,-0.017231,+2.778971,+5.072368,+3.662366,+2.665047,+0.988737,+0.094806,-0.130926,
+ACC: +87.200000 %.
+AUC: +0.949841
+
+------------------
+ !!! STOP +17 ITERATION !!! 
+
+
+
+
+----ENCRYPTED-----
+w:-3.535824,+0.488077,-0.028779,+2.797942,+5.188511,+3.728118,+2.696551,+1.019925,+0.105506,-0.097565,
+ACC: +87.200000 %.
+AUC: +0.949270
+
+------------------
+-------TRUE-------
+w:-0.995809,-0.021147,+0.037866,+0.112761,+0.419122,+0.121678,+0.280501,+0.025558,-0.010868,-0.204415,
+ACC: +73.200000 %.
+AUC: +0.935079
+
+------------------
+ !!! STOP +5 FOLD !!! 
+------------------
+Average Encrypted correctness: +76.333333%
+Average Encrypted AUC: +0.802933
+Average True correctness: +53.000000%
+Average True AUC: +0.620532
+Average Evaluation Time: +1039619.849833
