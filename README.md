@@ -2,7 +2,6 @@
 
 IDASH2017 is a project for implementing our Logistic Regression Traning on  encrypted datasets (Privacy-Preserving Logistic Regression Training with a Faster Gradient Variant )
 
-The Python source codes to conduct the experiments in the clear and its results can be found in the folder "data" at IDASH2017/IDASH2017/data/. To run it, you need the Python version 2.7, NumPy (version 1.10.2) and matplotlib. 
 
 ## How to run this program? 
 
