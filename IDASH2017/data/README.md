@@ -1,4 +1,3 @@
-## The Python source codes are 'xperiment 11. AdagradWith.25XTXasG vs. Adagrad MNIST.py' and 'xperiment 11. NesterovWith.25XTXasG vs. Nesterov MNIST.py'.
 
 ## The Python Experimental results are:
 'PythonExperiment_Adagradvs.AdagradG_data103x1579_MLE.csv'  
