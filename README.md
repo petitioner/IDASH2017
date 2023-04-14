@@ -1,6 +1,6 @@
 # IDASH2017
 
-IDASH2017 is a project for implementing our Logistic Regression Traning on  encrypted datasets (Privacy-Preserving Logistic Regression Training with a Faster Gradient Variant )
+IDASH2017 is a project for implementing our Logistic Regression Traning on  encrypted datasets (Privacy-Preserving Logistic Regression Training with A Faster Gradient Variant )
 
 
 ## How to run this program? 
