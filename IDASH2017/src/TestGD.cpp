@@ -107,6 +107,9 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 
 	cout << "batch = " << batch << ", slots = " << slots << ", cnum = " << cnum << endl;
 
+	
+    cout << "logQ = " << logQ << ", logN = " << logN << endl;
+	
 //	cout << "HEAAN PARAMETER logQ: " << logQ << endl;
 //	cout << "HEAAN PARAMETER logN: " << logN << endl;
 
