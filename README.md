@@ -2,6 +2,8 @@
 
 IDASH2017 is a project for implementing our Logistic Regression Traning on  encrypted datasets (Privacy-Preserving Logistic Regression Training with A Faster Gradient Variant )
 
+## Pythond codes 
+The Python source codes are 'xperiment 11. AdagradWith.25XTXasG vs. Adagrad MNIST.py' and 'Experiment 11. NesterovWith.25XTXasG vs. Nesterov MNIST.py'.
 
 ## How to run this program? 
 
