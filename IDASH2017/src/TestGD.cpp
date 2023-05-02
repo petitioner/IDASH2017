@@ -213,7 +213,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 		for (long iter = 0; iter < numIter; ++iter) {
 			cout << " !!! START " << iter + 1 << " ITERATION !!! " << endl;
 			eta = (1 - alpha0) / alpha1;
-			gamma = 1.0 / (iter + 1) / sampleDimTrain;
+			gamma = 10.0 / (iter + 1) / sampleDimTrain;
 
 			cout << "encWData.logq before: " << encWData[0].logq << endl;
 			timeutils.start("Enc NLGD");
