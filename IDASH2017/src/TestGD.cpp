@@ -181,14 +181,23 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 		timeutils.start("Encrypting zInvB...");
 		cipherGD.encZData(encZInvB, zInvB, slots, factorDim, sampleDimTrain, batch, cnum, wBits+wBits, logQ);
 		timeutils.stop("zInvB encryption");
+		for (long i = 0; i < cnum; ++i) {
+			SerializationUtils::writeCiphertext(encZInvB[i], "encZInvB["+ std::to_string(i) +"].txt");
+		}
 
 		timeutils.start("Encrypting zData...");
 		cipherGD.encZData(encZData, zDataTrain, slots, factorDim, sampleDimTrain, batch, cnum, wBits, logQ);
 		timeutils.stop("zData encryption");
+		for (long i = 0; i < cnum; ++i) {
+			SerializationUtils::writeCiphertext(encZData[i], "encZData["+ std::to_string(i) +"].txt");
+		}
 
 		timeutils.start("Encrypting wData and vData...");
 		if(isInitZero) {
 			cipherGD.encWVDataZero(encWData, encVData, cnum, slots, wBits, logQ);
+			for (long i = 0; i < cnum; ++i) {
+				SerializationUtils::writeCiphertext(encWData[i], "encWData["+ std::to_string(i) +"].txt");
+			}
 		} else {
 			cout << "THIS SHOULD NOT HAPPEN!" << endl;
 			exit(0);
