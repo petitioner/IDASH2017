@@ -6,6 +6,8 @@
 
 #include <complex>
 
+#define variablename( val )    # val 
+
 using namespace std;
 using namespace NTL;
 
