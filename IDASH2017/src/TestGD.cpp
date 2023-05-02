@@ -97,6 +97,8 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 //			(sdimBits + wBits + lBits) + numIter * ((kBits + 1) * wBits + 2 * pBits + aBits);
 
 //	long logN = TestGD::suggestLogN(80, logQ);
+	//long logN = 16;
+    	//long logQ = 990; // 991.300840336 > logQ  to ensure 128-bit security level. Security Parameter λ
 	long bBits = min(logN - 1 - sdimBits, fdimBits);
 	long batch = 1 << bBits;
 	long sBits = sdimBits + bBits;
@@ -267,6 +269,8 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 			alpha0 = alpha1;
 			alpha1 = (1. + sqrt(1. + 4.0 * alpha0 * alpha0)) / 2.0;
 			cout << " !!! STOP " << iter + 1 << " ITERATION !!! " << endl;
+			cout << "CurrentRSS (MB): " << ( Tools::getCurrentRSS() /1024.0/1024.0 ) << endl;
+    			cout << "PeakRSS    (MB): " << ( Tools::getPeakRSS() /1024.0/1024.0 )    << endl;
 		}
 		averevalutime += alliterationtime;
 
@@ -288,6 +292,8 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 
 		cout << " !!! STOP " << fnum + 1 << " FOLD !!! " << endl;
 		cout << "------------------" << endl;
+		cout << "CurrentRSS (MB): " << ( Tools::getCurrentRSS() /1024.0/1024.0 ) << endl;
+    		cout << "PeakRSS    (MB): " << ( Tools::getPeakRSS() /1024.0/1024.0 )    << endl;
 	}
 
 	cout << "Average Encrypted correctness: " << averenccor/fold  << "%" << endl;
@@ -295,6 +301,9 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 	cout << "Average True correctness: " << avertruecor/fold << "%" << endl;
 	cout << "Average True AUC: " << avertrueauc/fold << endl;
 	cout << "Average Evaluation Time: " << averevalutime/fold << endl;
+	
+	cout << "CurrentRSS (MB): " << ( Tools::getCurrentRSS() /1024.0/1024.0 ) << endl;
+    	cout << "PeakRSS    (MB): " << ( Tools::getPeakRSS() /1024.0/1024.0 )    << endl;
 }
 
 void TestGD::testPlainNLGDFOLD(long fold, double** zData, long factorDim, long sampleDim,
