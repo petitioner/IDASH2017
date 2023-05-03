@@ -4,13 +4,15 @@
 #include <math.h>
 #include <fstream>
 #include <iostream>
-#include <iomanip>
+#include <iomanip>     //setw
+#include <string.h>
 #include <string>
 #include <vector>
-#include <algorithm>    // std::shuffle
+#include <algorithm>    // std::shuffle + std::copy
 #include <array>        // std::array
 #include <random>       // std::default_random_engine
 #include <chrono>       // std::chrono::system_clock
+
 
 using namespace NTL;
 
