@@ -531,7 +531,7 @@ double GD::calculateACC(double** zData, double* wData, long factorDim, long samp
  * memory use) measured in bytes, or zero if the value cannot be
  * determined on this OS.
  */
-size_t Tools::getPeakRSS() {
+size_t GD::getPeakRSS() {
 #if defined(_WIN32)
     /* Windows -------------------------------------------------- */
     PROCESS_MEMORY_COUNTERS info;
@@ -572,7 +572,7 @@ size_t Tools::getPeakRSS() {
  * Returns the current resident set size (physical memory use) measured
  * in bytes, or zero if the value cannot be determined on this OS.
  */
-size_t Tools::getCurrentRSS() {
+size_t GD::getCurrentRSS() {
 #if defined(_WIN32)
     /* Windows -------------------------------------------------- */
     PROCESS_MEMORY_COUNTERS info;
