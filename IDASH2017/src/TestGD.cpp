@@ -15,7 +15,7 @@
 #include "CipherGD.h"
 #include "GD.h"
 
-#include "Tools.h"
+
 
 long TestGD::suggestLogN(long lambda, long logQ) {
 	long NBnd = ceil(logQ * (lambda + 110) / 3.6);
