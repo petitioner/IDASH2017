@@ -65,6 +65,9 @@ public:
 	static double calculateMSE(double* wData1, double* wData2, long factorDim);
 	static double calculateNMSE(double* wData1, double* wData2, long factorDim);
         static double calculateACC(double** zData, double* wData, long factorDim, long sampleDim, double& correctness, double& auc);
+	
+	static size_t getPeakRSS();
+	static size_t getCurrentRSS();
 
 };
 
