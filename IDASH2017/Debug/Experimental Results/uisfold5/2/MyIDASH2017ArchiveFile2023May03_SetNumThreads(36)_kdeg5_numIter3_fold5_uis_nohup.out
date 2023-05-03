@@ -1,0 +1,502 @@
+double** zData = GD::zDataFromFile(trainfile, factorDim, sampleDim, 1);
+printData(zData, , ,) 
+The   0-th Row:   +1.000000   +0.527778   +0.166667   +0.000000   +0.000000   +0.025000   +1.000000   +0.000000   +1.000000
+
+The  +1-th Row:   +1.000000   +0.361111   +0.629630   +0.000000   +1.000000   +0.200000   +1.000000   +0.000000   +1.000000
+
+
+# ./MyIDASH2017 "../data/data103x1579.txt" 1 5 5 1 -1 1 5 1
+
+
+
+testEncNLGDFOLD( ) 
+
+isYfirst = +1, number of iterations = +3, g_k = +5
+factors = +9, samples = +575, fold = +5
+gammaUp = +1.000000, gammaDown = -1.000000, isInitZero = +1
+batch = +16, slots = +8192, cnum = +1
+logQ = +1200, logN = +16
+------------------
+Start Scheme generating...
+Scheme generation time = +11849.909000 ms
+------------------
+------------------
+Start Bootstrap Key generating
+Bootstrap Key generated time = +1396.083000 ms
+------------------
+------------------
+Start Polynomial generating...
+Polynomial generation time = +14.254000 ms
+------------------
+ !!! START +1 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.002016   +0.005746   +0.006149   +0.004952   +0.010504   +0.017933   +0.002564   +0.003521   +0.002772
+
+The  +1-th Row:   +0.002016   +0.005746   +0.006149   +0.004952   +0.010504   +0.017933   +0.002564   +0.003521   +0.002772
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +286.333000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +347.590000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +367.369000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +12128.991000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.222422,+0.208660,+0.221355,+0.136620,+0.252205,+0.278051,+0.231882,+0.232047,+0.220947,
+ACC: +78.260870 %.
+AUC: +0.650667
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+CurrentRSS (MB): +3686.753906
+PeakRSS    (MB): +3972.730469
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9893.243000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.220617,+0.206836,+0.219524,+0.134945,+0.250261,+0.276152,+0.230035,+0.230200,+0.219117,
+ACC: +78.260870 %.
+AUC: +0.651111
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+CurrentRSS (MB): +3893.226562
+PeakRSS    (MB): +3972.730469
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9324.286000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.276810,+0.248231,+0.274247,+0.116400,+0.326933,+0.383581,+0.294477,+0.295156,+0.273753,
+ACC: +78.260870 %.
+AUC: +0.657778
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+CurrentRSS (MB): +3893.226562
+PeakRSS    (MB): +3972.730469
+
+
+
+
+----ENCRYPTED-----
+w:+0.292666,+0.259904,+0.289666,+0.111174,+0.348538,+0.413853,+0.312636,+0.313459,+0.289148,
+ACC: +78.260870 %.
+AUC: +0.659556
+
+------------------
+-------TRUE-------
+w:+0.196554,+0.028304,+0.067412,-0.241052,+0.117521,+0.090253,+0.258666,+0.242628,+0.168998,
+ACC: +76.521739 %.
+AUC: +0.648444
+
+------------------
+ !!! STOP +1 FOLD !!! 
+------------------
+CurrentRSS (MB): +3893.226562
+PeakRSS    (MB): +3972.730469
+ !!! START +2 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.002015   +0.005824   +0.006170   +0.005031   +0.010186   +0.017549   +0.002567   +0.003566   +0.002726
+
+The  +1-th Row:   +0.002015   +0.005824   +0.006170   +0.005031   +0.010186   +0.017549   +0.002567   +0.003566   +0.002726
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +224.613000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +224.144000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +250.776000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11526.930000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.238801,+0.226370,+0.246426,+0.167060,+0.208151,+0.302585,+0.246506,+0.247768,+0.247847,
+ACC: +71.304348 %.
+AUC: +0.551367
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+CurrentRSS (MB): +3847.570312
+PeakRSS    (MB): +3972.730469
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9878.249000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.236850,+0.224401,+0.244443,+0.165200,+0.206192,+0.300538,+0.244516,+0.245778,+0.245858,
+ACC: +71.304348 %.
+AUC: +0.551737
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+CurrentRSS (MB): +3845.441406
+PeakRSS    (MB): +3972.730469
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9380.170000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.296734,+0.271203,+0.311343,+0.161334,+0.235949,+0.419788,+0.311156,+0.314147,+0.313924,
+ACC: +71.304348 %.
+AUC: +0.562823
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+CurrentRSS (MB): +3869.441406
+PeakRSS    (MB): +3972.730469
+
+
+
+
+----ENCRYPTED-----
+w:+0.313630,+0.284399,+0.330194,+0.160245,+0.244334,+0.453391,+0.329934,+0.333412,+0.333104,
+ACC: +71.304348 %.
+AUC: +0.564302
+
+------------------
+-------TRUE-------
+w:+0.311351,+0.072936,+0.133849,-0.137480,+0.025544,+0.112590,+0.342232,+0.305233,+0.333485,
+ACC: +71.304348 %.
+AUC: +0.596083
+
+------------------
+ !!! STOP +2 FOLD !!! 
+------------------
+CurrentRSS (MB): +3869.441406
+PeakRSS    (MB): +3972.730469
+ !!! START +3 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.002026   +0.005847   +0.006241   +0.005050   +0.009994   +0.017329   +0.002628   +0.003600   +0.002809
+
+The  +1-th Row:   +0.002026   +0.005847   +0.006241   +0.005050   +0.009994   +0.017329   +0.002628   +0.003600   +0.002809
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +211.792000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +223.128000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +251.071000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11659.916000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.231908,+0.217893,+0.245391,+0.162540,+0.234852,+0.278201,+0.240292,+0.244573,+0.232500,
+ACC: +74.782609 %.
+AUC: +0.558140
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+CurrentRSS (MB): +3846.042969
+PeakRSS    (MB): +3973.691406
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10315.038000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.230009,+0.215981,+0.243456,+0.160738,+0.232881,+0.276220,+0.238354,+0.242632,+0.230574,
+ACC: +74.782609 %.
+AUC: +0.558140
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+CurrentRSS (MB): +3846.156250
+PeakRSS    (MB): +3973.691406
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9273.943000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.287442,+0.258813,+0.313681,+0.157346,+0.289067,+0.376316,+0.303202,+0.312028,+0.288440,
+ACC: +74.782609 %.
+AUC: +0.575381
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+CurrentRSS (MB): +3869.906250
+PeakRSS    (MB): +3973.691406
+
+
+
+
+----ENCRYPTED-----
+w:+0.303648,+0.270891,+0.333469,+0.156390,+0.304900,+0.404521,+0.321475,+0.331582,+0.304745,
+ACC: +74.782609 %.
+AUC: +0.579791
+
+------------------
+-------TRUE-------
+w:+0.257960,+0.046636,+0.135351,-0.148465,+0.082047,+0.089139,+0.294946,+0.293445,+0.227248,
+ACC: +74.782609 %.
+AUC: +0.643144
+
+------------------
+ !!! STOP +3 FOLD !!! 
+------------------
+CurrentRSS (MB): +3869.906250
+PeakRSS    (MB): +3973.691406
+ !!! START +4 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.002012   +0.005682   +0.006246   +0.005384   +0.009670   +0.016355   +0.002495   +0.003583   +0.002720
+
+The  +1-th Row:   +0.002012   +0.005682   +0.006246   +0.005384   +0.009670   +0.016355   +0.002495   +0.003583   +0.002720
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +217.219000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +211.883000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +239.916000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11690.370000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.224053,+0.218417,+0.217461,+0.132035,+0.227249,+0.277189,+0.244764,+0.228806,+0.222332,
+ACC: +77.391304 %.
+AUC: +0.609334
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+CurrentRSS (MB): +3845.550781
+PeakRSS    (MB): +3973.691406
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9987.706000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.222228,+0.216567,+0.215612,+0.130350,+0.225337,+0.275270,+0.242888,+0.226949,+0.220482,
+ACC: +77.391304 %.
+AUC: +0.608902
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+CurrentRSS (MB): +3846.023438
+PeakRSS    (MB): +3973.691406
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9216.010000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.278315,+0.265751,+0.264804,+0.106179,+0.279064,+0.379941,+0.317878,+0.287745,+0.274690,
+ACC: +77.391304 %.
+AUC: +0.620570
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+CurrentRSS (MB): +3869.773438
+PeakRSS    (MB): +3973.691406
+
+
+
+
+----ENCRYPTED-----
+w:+0.294141,+0.279619,+0.278664,+0.099368,+0.294204,+0.409435,+0.339009,+0.304876,+0.289966,
+ACC: +77.391304 %.
+AUC: +0.621003
+
+------------------
+-------TRUE-------
+w:+0.202811,+0.057017,+0.052238,-0.236623,+0.073301,+0.095848,+0.358732,+0.221625,+0.173467,
+ACC: +76.521739 %.
+AUC: +0.612792
+
+------------------
+ !!! STOP +4 FOLD !!! 
+------------------
+CurrentRSS (MB): +3869.773438
+PeakRSS    (MB): +3973.691406
+ !!! START +5 FOLD !!! 
+
+zInvB : 
+The  +0-th Row:   +0.002037   +0.005986   +0.006093   +0.005151   +0.009977   +0.016684   +0.002639   +0.003779   +0.002791
+
+The  +1-th Row:   +0.002037   +0.005986   +0.006093   +0.005151   +0.009977   +0.016684   +0.002639   +0.003779   +0.002791
+
+------------------
+Start Encrypting zInvB...
+zInvB encryption time = +211.633000 ms
+------------------
+------------------
+Start Encrypting zData...
+zData encryption time = +213.394000 ms
+------------------
+------------------
+Start Encrypting wData and vData...
+wData and vData encryption time = +252.554000 ms
+------------------
+ !!! START +1 ITERATION !!! 
+encWData.logq before: +1200
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +11186.586000 ms
+------------------
+encWData.logq after: +910
+----ENCRYPTED--encVData---
+w:+0.243481,+0.226882,+0.246642,+0.163149,+0.249756,+0.295752,+0.248100,+0.264458,+0.250941,
+ACC: +70.434783 %.
+AUC: +0.537400
+
+------------------
+ !!! STOP +1 ITERATION !!! 
+CurrentRSS (MB): +3845.464844
+PeakRSS    (MB): +3973.691406
+ !!! START +2 ITERATION !!! 
+encWData.logq before: +910
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +10078.202000 ms
+------------------
+encWData.logq after: +600
+----ENCRYPTED--encVData---
+w:+0.241486,+0.224871,+0.244620,+0.161271,+0.247677,+0.293669,+0.246070,+0.262410,+0.248911,
+ACC: +70.434783 %.
+AUC: +0.537400
+
+------------------
+ !!! STOP +2 ITERATION !!! 
+CurrentRSS (MB): +3845.843750
+PeakRSS    (MB): +3973.691406
+ !!! START +3 ITERATION !!! 
+encWData.logq before: +600
+------------------
+Start Enc NLGD
+
+encGrad[i].logp = +60
+Enc NLGD time = +9269.420000 ms
+------------------
+encWData.logq after: +290
+----ENCRYPTED--encVData---
+w:+0.302308,+0.268308,+0.308200,+0.151754,+0.309752,+0.402747,+0.310725,+0.342911,+0.316577,
+ACC: +70.434783 %.
+AUC: +0.547930
+
+------------------
+ !!! STOP +3 ITERATION !!! 
+CurrentRSS (MB): +3869.593750
+PeakRSS    (MB): +3973.691406
+
+
+
+
+----ENCRYPTED-----
+w:+0.319468,+0.280556,+0.326115,+0.149072,+0.327243,+0.433483,+0.328944,+0.365595,+0.335644,
+ACC: +70.434783 %.
+AUC: +0.548293
+
+------------------
+-------TRUE-------
+w:+0.340089,+0.065341,+0.133768,-0.151558,+0.104965,+0.111480,+0.335104,+0.377062,+0.343817,
+ACC: +70.434783 %.
+AUC: +0.564270
+
+------------------
+ !!! STOP +5 FOLD !!! 
+------------------
+CurrentRSS (MB): +3869.593750
+PeakRSS    (MB): +3973.691406
+Average Encrypted correctness: +74.434783%
+Average Encrypted AUC: +0.592897
+Average True correctness: +59.826087%
+Average True AUC: +0.500092
+Average Evaluation Time: +30961.812000
+CurrentRSS (MB): +3869.593750
+PeakRSS    (MB): +3973.691406
