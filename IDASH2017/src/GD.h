@@ -1,7 +1,45 @@
+
+////////////////////////////////////////////////////////////////////////////////////
+#if defined(_WIN32)
+#include <windows.h>
+#include <psapi.h>
+
+#elif defined(__unix__) || defined(__unix) || defined(unix) || (defined(__APPLE__) && defined(__MACH__))
+#include <unistd.h>
+#include <sys/resource.h>
+
+#if defined(__APPLE__) && defined(__MACH__)
+#include <mach/mach.h>
+
+#elif (defined(_AIX) || defined(__TOS__AIX__)) || (defined(__sun__) || defined(__sun) || defined(sun) && (defined(__SVR4) || defined(__svr4__)))
+#include <fcntl.h>
+#include <procfs.h>
+
+#elif defined(__linux__) || defined(__linux) || defined(linux) || defined(__gnu_linux__)
+#include <stdio.h>
+
+#endif
+
+#else
+#error "Cannot define getPeakRSS( ) or getCurrentRSS( ) for an unknown OS."
+#endif
+////////////////////////////////////////////////////////////////////////////////////
+
 #ifndef IDASH2017_GD_H_
 #define IDASH2017_GD_H_
 
 #include <iostream>
+#include <assert.h>
+#include <cmath>
+#include <set>
+
+#include "Ciphertext.h"
+#include "NTL/ZZX.h"
+#include "Scheme.h"
+#include "TestScheme.h"
+#include "SecretKey.h"
+#include "TimeUtils.h"
+
 
 static double degree3[3] = {-0.5,0.15012,-0.001593};
 //static double degree5[4] = {-0.5,0.19131,-0.0045963, 0.0000412332};
