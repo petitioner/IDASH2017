@@ -3,7 +3,7 @@
             /home/NAME/Music/C16# ls
             IDASH2017
 
-## step 2. rename IDASH2017 and move it to /home/NAME/Music/C16/IDASH2017-master/IDASH2017/HEAAN/HEAAN/lib
+## step 2. rename IDASH2017 to IDASH2017-master and move it to be align with /home/NAME/Music/C16/IDASH2017-master/IDASH2017/HEAAN/HEAAN/lib
 ## step 3. go to /home/NAME/Music/C16/IDASH2017-master/IDASH2017/lib/lib#   and   unzip libntl.a.tar.xz  to libntl.a
             tar -xf libntl.a.tar.xz 
             /home/NAME/Music/C16/IDASH2017-master/IDASH2017/lib/lib# ls
