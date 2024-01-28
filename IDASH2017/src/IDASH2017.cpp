@@ -64,7 +64,7 @@ int main(int argc, char **argv) {
 	//string trainfile("../data/pcs.txt"); 
 	//string trainfile("../data/uis.txt"); 
 	bool isYfirst = 1;                            //atoi(argv[2]);
-	long numIter = 3;                             //atol(argv[3]);
+	long numIter = 4;                             //atol(argv[3]);
 	long kdeg = 5;                                //atol(argv[4]);
 	double gammaUp = 1;                           //atof(argv[5]);
 	double gammaDown = -1;                        //atof(argv[6]);
