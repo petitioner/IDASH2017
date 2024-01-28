@@ -188,7 +188,7 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
 
         
         timeutils.start("Encrypting zInvB...");
-        cipherGD.encZData(encZInvB, zInvB, slots, factorDim, sampleDimTrain, batch, cnum, wBits+wBits, logQ);
+        cipherGD.encZData(encZInvB, zInvB, slots, factorDim, sampleDimTrain, batch, cnum, wBits+10, logQ);
         timeutils.stop("zInvB encryption");
         for (long i = 0; i < cnum; ++i) {
             SerializationUtils::writeCiphertext(encZInvB[i], "encZInvB["+ std::to_string(i) +"].txt");
@@ -231,7 +231,8 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
         for (long iter = 0; iter < numIter; ++iter) {
             cout << " !!! START " << iter + 1 << " ITERATION !!! " << endl;
             eta = (1 - alpha0) / alpha1;
-            gamma = 10.0 / (iter + 1) / sampleDimTrain;
+            //gamma = 10.0 / (iter + 1) / sampleDimTrain;
+	    gamma = pow(0.9, iter);
 
             cout << "encWData.logq before: " << encWData[0].logq << endl;
             timeutils.start("Enc NLGD");
@@ -248,7 +249,8 @@ void TestGD::testEncNLGDFOLD(long fold, double** zData, long factorDim, long sam
             GD::plainNLGDiteration(kdeg, zDataTrain, pwData, pvData, factorDim, sampleDimTrain, gamma, eta);
             GD::trueNLGDiteration(zDataTrain, twData, tvData, factorDim, sampleDimTrain, gamma, eta);
 
-        if ( encVData[0].logq <= 310 + wBits && iter < numIter-1 || encVData[0].logq < wBits && iter == numIter-1 ) {
+        //if ( encVData[0].logq <= 310 + wBits && iter < numIter-1 || encVData[0].logq < wBits && iter == numIter-1 ) {
+        if ( 0 ) {
             
             timeutils.start("Use Bootstrap To Recrypt Ciphertext");         
                 NTL_EXEC_RANGE(cnum, first, last);
