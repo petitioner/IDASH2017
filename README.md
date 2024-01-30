@@ -63,8 +63,7 @@ In the 'Debug' folder, you can find the C++ running results for six datasets:
 
         'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold10_Blogp40_idash18x1579.txt_nohup.out'  
         
-        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_edin.txt_nohup.out
-'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_edin.txt_nohup.out'  
         'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_lbw.txt_nohup.out'  
         'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_nhanes3.txt_nohup.out'  
         'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_pcs.txt_nohup.out'  
