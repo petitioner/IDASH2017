@@ -61,13 +61,14 @@ You can change the source codes and then repeat the above lines to debug your ow
 
 In the 'Debug' folder, you can find the C++ running results for six datasets:   
 
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold10_idash18x1579.txt_B_nohup.out'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold10_Blogp40_idash18x1579.txt_nohup.out'  
         
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_edin.txt_F_nohup.out'  
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_lbw.txt_B_nohup.out'  
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_nhanes3.txt_D_nohup.out'  
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_pcs.txt_D_nohup.out'  
-        'MyIDASH2017ArchiveFile20220429_SetNumThreads(36)_kdeg5_numIter3_fold5_uis.txt_E_nohup.out'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_edin.txt_nohup.out
+'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_lbw.txt_nohup.out'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_nhanes3.txt_nohup.out'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_pcs.txt_nohup.out'  
+        'MyIDASH2017ArchiveFile20240128_SetNumThreads(36)_kdeg5_numIter4_fold05_Blogp40_uis.txt_nohup.out'  
   
         
         
